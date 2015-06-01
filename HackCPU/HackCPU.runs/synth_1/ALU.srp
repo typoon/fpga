@@ -1,0 +1,320 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> 
+Reading design: ALU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ALU.prj"
+
+---- Target Parameters
+Target Device                      : xc6slx16csg324-3
+Output File Name                   : "ALU.ngc"
+
+---- Source Options
+Top Module Name                    : ALU
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Netlist Hierarchy                  : rebuilt
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/gilgamesh/code/fpga/HackCPU/HackCPU.srcs/sources_1/new/HalfAdder.v" into library work
+Parsing module <HalfAdder>.
+Analyzing Verilog file "/home/gilgamesh/code/fpga/HackCPU/HackCPU.srcs/sources_1/new/FullAdder.v" into library work
+Parsing module <FullAdder>.
+Analyzing Verilog file "/home/gilgamesh/code/fpga/HackCPU/HackCPU.srcs/sources_1/new/Add16.v" into library work
+Parsing module <Add16>.
+Analyzing Verilog file "/home/gilgamesh/code/fpga/HackCPU/HackCPU.srcs/sources_1/new/ALU.v" into library work
+Parsing module <ALU>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <ALU>.
+
+Elaborating module <FullAdder>.
+
+Elaborating module <HalfAdder>.
+WARNING:HDLCompiler:1127 - "/home/gilgamesh/code/fpga/HackCPU/HackCPU.srcs/sources_1/new/ALU.v" Line 38: Assignment to sum ignored, since the identifier is never used
+WARNING:HDLCompiler:604 - "/home/gilgamesh/code/fpga/HackCPU/HackCPU.srcs/sources_1/new/ALU.v" Line 39: Module instantiation should have an instance name
+WARNING:HDLCompiler:1016 - "/home/gilgamesh/code/fpga/HackCPU/HackCPU.srcs/sources_1/new/Add16.v" Line 46: Port carry is not connected to this instance
+
+Elaborating module <Add16>.
+WARNING:HDLCompiler:634 - "/home/gilgamesh/code/fpga/HackCPU/HackCPU.srcs/sources_1/new/ALU.v" Line 35: Net <a> does not have a driver.
+WARNING:Xst:2972 - "/home/gilgamesh/code/fpga/HackCPU/HackCPU.srcs/sources_1/new/ALU.v" line 38. All outputs of instance <fa> of block <FullAdder> are unconnected in block <ALU>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ALU>.
+    Related source file is "/home/gilgamesh/code/fpga/HackCPU/HackCPU.srcs/sources_1/new/ALU.v".
+WARNING:Xst:647 - Input <zx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <nx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <zy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ny> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <f> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <no> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/gilgamesh/code/fpga/HackCPU/HackCPU.srcs/sources_1/new/ALU.v" line 38: Output port <sum> of the instance <fa> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/gilgamesh/code/fpga/HackCPU/HackCPU.srcs/sources_1/new/ALU.v" line 38: Output port <carry> of the instance <fa> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <a> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <b> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <c> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <ALU> synthesized.
+
+Synthesizing Unit <FullAdder>.
+    Related source file is "/home/gilgamesh/code/fpga/HackCPU/HackCPU.srcs/sources_1/new/FullAdder.v".
+    Summary:
+	no macro.
+Unit <FullAdder> synthesized.
+
+Synthesizing Unit <HalfAdder>.
+    Related source file is "/home/gilgamesh/code/fpga/HackCPU/HackCPU.srcs/sources_1/new/HalfAdder.v".
+    Summary:
+Unit <HalfAdder> synthesized.
+
+Synthesizing Unit <Add16>.
+    Related source file is "/home/gilgamesh/code/fpga/HackCPU/HackCPU.srcs/sources_1/new/Add16.v".
+INFO:Xst:3210 - "/home/gilgamesh/code/fpga/HackCPU/HackCPU.srcs/sources_1/new/Add16.v" line 46: Output port <carry> of the instance <fa15> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <Add16> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Xors                                                 : 32
+ 1-bit xor2                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Xors                                                 : 32
+ 1-bit xor2                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <Add16> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block ALU, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ALU.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 23
+#      LUT2                        : 1
+#      LUT3                        : 7
+#      LUT4                        : 1
+#      LUT5                        : 12
+#      LUT6                        : 2
+# IO Buffers                       : 48
+#      IBUF                        : 32
+#      OBUF                        : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                   23  out of   9112     0%  
+    Number used as Logic:                23  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     23
+   Number with an unused Flip Flop:      23  out of     23   100%  
+   Number with an unused LUT:             0  out of     23     0%  
+   Number of fully used LUT-FF pairs:     0  out of     23     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          56
+ Number of bonded IOBs:                  48  out of    232    20%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 12.196ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 272 / 16
+-------------------------------------------------------------------------
+Delay:               12.196ns (Levels of Logic = 20)
+  Source:            x<2> (PAD)
+  Destination:       out<15> (PAD)
+
+  Data Path: x<2> to out<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.981  x_2_IBUF (x_2_IBUF)
+     begin scope: '_i000001:a<2>'
+     begin scope: '_i000001/fa2:a'
+     LUT6:I0->O            3   0.203   0.755  carry1 (carry)
+     end scope: '_i000001/fa2:carry'
+     begin scope: '_i000001/fa4:c'
+     LUT5:I3->O            3   0.203   0.755  carry1 (carry)
+     end scope: '_i000001/fa4:carry'
+     begin scope: '_i000001/fa6:c'
+     LUT5:I3->O            3   0.203   0.755  carry1 (carry)
+     end scope: '_i000001/fa6:carry'
+     begin scope: '_i000001/fa8:c'
+     LUT5:I3->O            3   0.203   0.755  carry1 (carry)
+     end scope: '_i000001/fa8:carry'
+     begin scope: '_i000001/fa9:c'
+     LUT3:I1->O            2   0.203   0.721  carry1 (carry)
+     end scope: '_i000001/fa9:carry'
+     begin scope: '_i000001/fa11:c'
+     LUT5:I3->O            3   0.203   0.755  carry1 (carry)
+     end scope: '_i000001/fa11:carry'
+     begin scope: '_i000001/fa13:c'
+     LUT5:I3->O            2   0.203   0.721  carry1 (carry)
+     end scope: '_i000001/fa13:carry'
+     begin scope: '_i000001/fa15:c'
+     begin scope: '_i000001/fa15/ha2:carry<13>'
+     LUT5:I3->O            1   0.203   0.579  Mxor_sum_xo<0>1 (sum)
+     end scope: '_i000001/fa15/ha2:sum'
+     end scope: '_i000001/fa15:sum'
+     end scope: '_i000001:out<15>'
+     OBUF:I->O                 2.571          out_15_OBUF (out<15>)
+    ----------------------------------------
+    Total                     12.196ns (5.417ns logic, 6.779ns route)
+                                       (44.4% logic, 55.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 6.50 secs
+ 
+--> 
+
+
+Total memory usage is 385052 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+
