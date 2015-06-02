@@ -1,0 +1,8 @@
+INTSTYLE=pa
+INFILE=/home/gilgamesh/code/fpga/SevenSeg/SevenSeg.runs/impl_1/top_routed.ncd
+OUTFILE=/home/gilgamesh/code/fpga/SevenSeg/SevenSeg.runs/impl_1/top.bit
+FAMILY=Spartan6
+PART=xc6slx16-2csg324
+WORKINGDIR=/home/gilgamesh/code/fpga/SevenSeg/SevenSeg.runs/impl_1
+LICENSE=WebPack
+USER_INFO=210684923_0_0_133

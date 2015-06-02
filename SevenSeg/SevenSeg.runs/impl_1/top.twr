@@ -1,0 +1,79 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/home/gilgamesh/software/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce
+-intstyle ise -o top.twr -v 30 -l 30 top_routed.ncd top.pcf
+
+Design file:              top_routed.ncd
+Physical constraint file: top.pcf
+Device,package,speed:     xc6slx16,csg324,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report, limited to 30 items per constraint
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+a[0]           |b[0]           |   10.733|
+a[0]           |b[1]           |   10.599|
+a[0]           |b[2]           |   10.564|
+a[0]           |b[3]           |   10.423|
+a[0]           |b[4]           |   10.245|
+a[0]           |b[5]           |   10.618|
+a[0]           |b[6]           |   10.301|
+a[1]           |b[0]           |   11.175|
+a[1]           |b[1]           |   10.809|
+a[1]           |b[2]           |   10.928|
+a[1]           |b[3]           |   10.865|
+a[1]           |b[4]           |   10.751|
+a[1]           |b[5]           |   10.982|
+a[1]           |b[6]           |   10.807|
+a[2]           |b[0]           |   11.080|
+a[2]           |b[1]           |   11.338|
+a[2]           |b[2]           |   11.218|
+a[2]           |b[3]           |   10.770|
+a[2]           |b[4]           |   10.842|
+a[2]           |b[5]           |   11.272|
+a[2]           |b[6]           |   10.898|
+a[3]           |b[0]           |   10.806|
+a[3]           |b[1]           |   10.897|
+a[3]           |b[2]           |   11.051|
+a[3]           |b[3]           |   10.496|
+a[3]           |b[4]           |   10.808|
+a[3]           |b[5]           |   11.105|
+a[3]           |b[6]           |   10.864|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Jun  1 21:44:05 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 388 MB
+
+
+
