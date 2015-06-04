@@ -69,7 +69,6 @@ module SevenSeg(
     // f = C'D' + A'BC' + AB' + BCD' + AC
     // g = A'B'C + CD' + A'BC' + AD + AB' + AC
     //
-    
 
     wire a, b, c, d;
     wire notA, notB, notC, notD;
@@ -168,17 +167,4 @@ module SevenSeg(
     or _or_g(gwr, gw1, gw2, gw3, gw4, gw5, gw6);
     not(seg[6], gwr);
    
-   /*
-    not n1(seg[6], bin[3]);
-    not n2(seg[5], bin[2]);
-    not n3(seg[4], bin[1]);
-    not n4(seg[3], bin[0]);
-    not n5(seg[2], bin[3]);
-    not n6(seg[1], bin[2]);
-    
-    
-    not n7(seg[0], bin[1]);
-
-    */
-
 endmodule
